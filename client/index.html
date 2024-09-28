@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drums to MIDI</title>
+    <link rel="stylesheet" href="/asset/style.css">
 </head>
 <body>
-    <h1>client view</h1>
+    <h1 id="title">client view</h1>
+
+    <label for="percussion-elements">What drum/cymbal is this mic currently attached to?</label> <br> <br>
+    <select name="percussion element" id="drum">
+        <option value="snare">Snare</option>
+        <option value="kick">Kick</option>
+        <option value="hihat">Hi Hat</option>
+    </select>
+
+    <div id="mic-vol">volume is </div>
+
+    <button onclick="startMic()">start mic</button>
 
     <script src="/socket.io/socket.io.js"></script>
-<script>
-    const socket = io();
-</script>
+    <script src="/asset/client.js"></script>
 </body>
 </html>
