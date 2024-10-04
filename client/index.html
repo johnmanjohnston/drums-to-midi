@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drums to MIDI</title>
-    <link rel="stylesheet" href="/asset/style.css">
+    <link rel="stylesheet" href="/asset/style.css" />
 </head>
 <body>
     <h1 id="title">client view</h1>
@@ -18,7 +18,12 @@
 
     <div id="mic-vol">volume is </div>
 
+<input type="range" id="gate-slider" min="1" max="1024" style="width: 97vw;" onchange="onGateSliderUpdate(this.value);" />        
+    <div id="gate-display-text">gate value goes here</div>
+
     <button onclick="startMic()">start mic</button>
+
+    <div id="transient-indicator"></div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/asset/client.js"></script>
