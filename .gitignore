@@ -1,8 +1,14 @@
+# annoying node stuff
 node_modules/
 package-lock.json
 package.json
+
+# security
 *.crt
 *.key
 
 # ignore JavaScript code compiled from TypeScript
 server/server.js
+
+# misc
+miditest.js

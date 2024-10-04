@@ -8,8 +8,8 @@ var gateDisplay = document.querySelector("#gate-display-text");
 
 var gate = 200;
 
-// var selectElement = document.querySelector("#drum");
-// var currentDrum = selectElement.value;
+var selectElement = document.querySelector("#drum");
+
 // console.log(currentDrum )
 
 function displaySocketID() {
@@ -55,7 +55,10 @@ function startMic() {
             
             var loudness = Math.round(arraySum / 100);            
             if (loudness > gate) {
-                transientIndicatorEl.innerHTML += "<div>transient indicated</div>";
+                transientIndicatorEl.innerHTML = `<div>transient indicated at level ${micVolElement.innerHTML}</div>`;
+
+                var currentDrum = selectElement.value;
+                        socket.emit("midi-message", currentDrum);
             }
         };
     }); 
