@@ -3,3 +3,6 @@ package-lock.json
 package.json
 *.crt
 *.key
+
+# ignore JavaScript code compiled from TypeScript
+server/server.js
